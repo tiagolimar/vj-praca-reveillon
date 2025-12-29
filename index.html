@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santo Réveillon 2026 - Praça de Alimentação</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .banner {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: '✝';
+            position: absolute;
+            font-size: 300px;
+            opacity: 0.1;
+            top: -80px;
+            right: -50px;
+            transform: rotate(15deg);
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .banner .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+        }
+
+        .banner .date {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .intro h2 {
+            font-size: 1.8rem;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .links-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .link-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: left 0.5s ease;
+        }
+
+        .link-card:hover::before {
+            left: 100%;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .link-card.tutorial {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .link-card.menu {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .link-card.order {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .link-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .link-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer {
+            background: #f8f9fa;
+            padding: 25px 40px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .footer p {
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                padding: 40px 30px;
+            }
+
+            .banner h1 {
+                font-size: 2.2rem;
+            }
+
+            .banner .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .content {
+                padding: 40px 25px;
+            }
+
+            .intro h2 {
+                font-size: 1.5rem;
+            }
+
+            .intro p {
+                font-size: 1rem;
+            }
+
+            .links-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .link-card {
+                padding: 25px 20px;
+            }
+
+            .footer {
+                padding: 20px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .banner h1 {
+                font-size: 1.8rem;
+            }
+
+            .banner .subtitle {
+                font-size: 1rem;
+            }
+
+            .banner .date {
+                font-size: 0.95rem;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .link-icon {
+                font-size: 2.5rem;
+            }
+
+            .link-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1>Santo Réveillon 2026</h1>
+            <p class="subtitle">Vocação de Jesus</p>
+            <p class="date">📅 31 de Dezembro de 2025</p>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content">
+            <div class="intro">
+                <h2>Praça de Alimentação Online</h2>
+                <p>Faça seus pedidos de forma prática e rápida através da nossa plataforma digital. Aproveite o evento
+                    com mais comodidade!</p>
+            </div>
+
+            <!-- Links Grid -->
+            <div class="links-container">
+                <!-- Tutorial Link -->
+                <a href="https://www.youtube.com/shorts/Ux9MlRaomTY" target="_blank" rel="noopener noreferrer"
+                    class="link-card tutorial">
+                    <span class="link-icon">📖</span>
+                    <h3 class="link-title">Tutorial</h3>
+                    <p class="link-description">Aprenda como fazer pedidos na plataforma</p>
+                </a>
+
+                <!-- Menu Link -->
+                <a href="https://santo-revellion.smartpos.app/cardapio" target="_blank" rel="noopener noreferrer" class="link-card menu">
+                    <span class="link-icon">🍽️</span>
+                    <h3 class="link-title">Cardápio Online</h3>
+                    <p class="link-description">Veja todos os produtos disponíveis</p>
+                </a>
+
+                <!-- Order Platform Link -->
+                <a href="https://santo-revellion.smartpos.app/" target="_blank" rel="noopener noreferrer" class="link-card order">
+                    <span class="link-icon">🛒</span>
+                    <h3 class="link-title">Fazer Pedido</h3>
+                    <p class="link-description">Acesse a plataforma de pedidos</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>✝ Vocação de Jesus • Santo Réveillon 2026</p>
+            <p style="margin-top: 8px; font-size: 0.85rem;">Por Cristo, com Cristo e em Cristo</p>
+        </div>
+    </div>
+</body>
+
+</html>
